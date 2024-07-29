@@ -12,7 +12,7 @@
 
 1. Clone this repository
 ```bash
-git clone https://github.com/snhou/cosmos-demo-without-astro-cl.git
+git clone https://github.com/snhou/cosmos-demo-without-astro-cli.git
 ```
 2. Change into the `cosmos-demo-without-astro-cli` directory
 ```bash
