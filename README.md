@@ -7,7 +7,7 @@
 
 
 
-## Setup environment
+## Environment Setup
 
 
 1. Clone this repository
@@ -50,19 +50,75 @@ docker compose up -d
 ```
 
 
-### Aiflow Connection Setup
+## Aiflow Connection Setup
+
+1. Connect to postgres
+
+* Admin > Connections
+![Alt text](./doc/image.png)
+
+```
+Connection Id : airflow_metadata_db
+Connection Type : Postgres
+Host : host.docker.internal
+Database : airflow
+Login : airflow
+Password : airflow
+Port : 5432
+```
+
+2. Trigger DAGs
+
+* DAGs > Actions(trigger)
+![Alt text](./doc/image2.png)
 
 
-### YAML file for other airflow versions
+
+## Install pgcli to connect Postgres
+1. Use brew to install
 ```
-curl -LfO 'https://airflow.apache.org/docs/apache-airflow/{airflow version}/docker-compose.yaml'
+brew install pgcli
 ```
 
-### connect to postgres
-```
-brew install postgressql
-```
+2. Use pgcli to connect postgres db
 ```
 pgcli -h localhost -p 5432 -u airflow
 ```
-pwd:airflow
+* pwd:airflow
+
+## Using command to check schema and tables
+
+* Clear window
+```
+\! clear
+```
+
+* List database
+```
+\l
+```
+
+* List tables
+```
+\dt
+```
+* List all table, view, 
+```
+\z
+```
+
+
+* list schema names
+```
+\dn
+```
+
+* Show now schema
+```
+SHOW SEARCH_PATH;
+```
+
+* Change schema
+```
+SET search_path TO {schema name}
+```
