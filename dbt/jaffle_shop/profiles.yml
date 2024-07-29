@@ -3,10 +3,10 @@ airflow_db:
   outputs:
     dev:
       type: postgres
-      host: postgres
-      user: postgres
-      password: postgres
+      host: host.docker.internal
+      user: airflow
+      password: airflow
       port: 5432
-      dbname: postgres
+      dbname: airflow
       schema: dbt
       threads: 4

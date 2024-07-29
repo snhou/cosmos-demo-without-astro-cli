@@ -1,23 +1,68 @@
 # cosmos-demo
 
-This repo contains a dbt project and a set of Airflow DAGs showing how to run dbt in Airflow using [Cosmos](https://github.com/astronomer/astronomer-cosmos).
+## Prerequisites
+1. git
+2. Python 3.9 or higher
+3. Docker Desktop
 
-To run this, you'll need:
 
-- [The Astro CLI installed](https://docs.astronomer.io/astro/cli/overview)
-- Docker
 
-## Setup
+## Setup environment
 
-1. Clone this repo
-2. Run `astro dev start` to start the Airflow instance
 
-## The DAGs
+1. Clone this repository
+```bash
+git clone https://github.com/snhou/cosmos-demo-without-astro-cl.git
+```
+2. Change into the `cosmos-demo-without-astro-cli` directory
+```bash
+cd cosmos-demo-without-astro-cl
+``` 
 
-The DAGs in this repo are meant to illustrate how to run dbt in Airflow using Cosmos. They use dbt's jaffle_shop example project.
+3. Install virtual environment
+``` bash
+python3 -m venv venv
+```
+4. Enter into venv
+```bash
+source venv/bin/activate
+```
 
-The DAGs fall into three categories:
+5. Update pip
+```bash
+python3 -m pip install --upgrade pip
+```
 
-- Basic: these are the simplest examples of Cosmos
-- Profiles: these show how to customize your dbt profiles using Cosmos
-- Filtering: these show how to use Cosmos to filter which models are run
+6. Install dependencies
+```bash
+python3 -m pip install -r requirements.txt
+```
+7. docker pull airflow image
+```bash
+docker pull apache/airflow:2.9.2
+```
+8. Open Docker Desktop and run docker-compose.yaml
+```bash
+docker compose build
+```
+```bash
+docker compose up -d
+```
+
+
+### Aiflow Connection Setup
+
+
+### YAML file for other airflow versions
+```
+curl -LfO 'https://airflow.apache.org/docs/apache-airflow/{airflow version}/docker-compose.yaml'
+```
+
+### connect to postgres
+```
+brew install postgressql
+```
+```
+pgcli -h localhost -p 5432 -u airflow
+```
+pwd:airflow

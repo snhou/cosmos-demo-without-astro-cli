@@ -14,7 +14,7 @@ only_models = DbtDag(
         select=["path:models"],
     ),
     # normal dag parameters
-    schedule_interval="@daily",
+    schedule_interval=None,
     start_date=datetime(2023, 1, 1),
     catchup=False,
     dag_id="only_models",
