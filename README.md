@@ -16,7 +16,7 @@ git clone https://github.com/snhou/cosmos-demo-without-astro-cli.git
 ```
 2. Change into the `cosmos-demo-without-astro-cli` directory
 ```bash
-cd cosmos-demo-without-astro-cl
+cd cosmos-demo-without-astro-cli
 ``` 
 
 3. Install virtual environment
