@@ -3,7 +3,8 @@
 ## Prerequisites
 1. git
 2. Python 3.9 or higher
-3. Docker Desktop
+3. pip
+4. Docker Desktop
 
 
 
