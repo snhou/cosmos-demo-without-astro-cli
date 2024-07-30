@@ -1,10 +1,11 @@
 # cosmos-demo
 
 ## Prerequisites
-1. git
-2. Python 3.9 or higher
-3. pip
-4. Docker Desktop
+1.Homebrew
+2. git
+3. Python 3.9 or higher
+4. pip
+5. Docker Desktop
 
 
 
