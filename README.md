@@ -1,7 +1,7 @@
 # cosmos-demo
 
 ## Prerequisites
-1.Homebrew
+1. Homebrew
 2. git
 3. Python 3.9 or higher
 4. pip
